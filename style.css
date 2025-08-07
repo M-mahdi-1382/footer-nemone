@@ -1,51 +1,68 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
 }
 
 .footer {
-  direction: rtl;
-  background: #0d224f; /* رنگ زمینه */
-  padding: 12px 0; /* فاصله داخلی */
-  width: 100%;
-  position: fixed; /* فوتر ثابت در پایین صفحه */
+  position: fixed;
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 20; /* بالا بودن فوتر */
+  background: #1b599e;
+  color: #fff;
+  padding: 10px 30px;
+  font-family: "Vazirmatn", Tahoma, Arial;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
-.footer-nav {
-  display: flex; /* استفاده از فلکس باکس برای چیدمان */
-  justify-content: flex-start; /* شروع از سمت راست */
-  align-items: center; /* وسط‌چین کردن عمودی */
-  max-width: 1200px; /* حداکثر عرض */
-  margin: auto; /* مرکز کردن */
-  padding: 0 24px; /* فاصله داخلی */
+.footer .left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-.footer-nav a {
-  color: #fff; /* رنگ متن */
-  text-decoration: none; /* حذف خط زیر متن */
-  font-family: Tahoma, "Vazirmatn", Arial, sans-serif; /* فونت */
-  font-size: 15px; /* اندازه فونت */
-  margin-right: 20px; /* فاصله بین لینک‌ها */
-  transition: color 0.2s; /* انیمیشن تغییر رنگ */
+.footer .left a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.2s;
 }
 
-.footer-nav a:last-child {
-  margin-right: 0; /* حذف فاصله برای آخرین لینک */
+.footer .left a:hover {
+  color: orange;
 }
 
-.footer-nav a:hover {
-  color: orange; /* رنگ متن هنگام هاور */
+.footer .right {
+  display: flex;
+  align-items: center;
+  gap: 23px;
 }
 
-.footer-icon {
-  margin-left: 16px; /* فاصله بین آیکن و لینک‌ها */
-  vertical-align: middle; /* تراز عمودی */
-  display: flex; /* نمایش به صورت فلکس */
-  align-items: center; /* وسط‌چین کردن عمودی */
-  color: orange; /* رنگ آیکن */
-  font-size: 20px; /* اندازه آیکن */
+.footer .right a,
+.footer .right span {
+  color: #fff;
+  transition: color 0.2s;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer .right a:hover,
+.footer .right span:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.footer .up-arrow {
+  font-size: 18px;
+  margin-right: 13px; /* تغییر به margin-right */
+  color: #fff;
+  transition: color 0.2s;
+}
+
+.footer .up-arrow:hover {
+  color: orange;
+  cursor: pointer;
 }
